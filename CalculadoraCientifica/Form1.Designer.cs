@@ -1,6 +1,6 @@
 ﻿namespace CalculadoraCientifica
 {
-    partial class Form1
+    partial class calculadora
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -54,6 +54,8 @@
             // 
             // txtPantalla
             // 
+            this.txtPantalla.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtPantalla.ForeColor = System.Drawing.SystemColors.InfoText;
             this.txtPantalla.Location = new System.Drawing.Point(25, 81);
             this.txtPantalla.Name = "txtPantalla";
             this.txtPantalla.ReadOnly = true;
@@ -291,10 +293,11 @@
             this.btnRaiz.UseVisualStyleBackColor = true;
             this.btnRaiz.Click += new System.EventHandler(this.btnRaiz_Click);
             // 
-            // Form1
+            // calculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(400, 450);
             this.Controls.Add(this.btnfraccion);
             this.Controls.Add(this.btnPorcentaje);
@@ -318,8 +321,10 @@
             this.Controls.Add(this.btnN4);
             this.Controls.Add(this.btnN7);
             this.Controls.Add(this.btnSuma);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Name = "calculadora";
+            this.Text = "calculadora";
+            this.TransparencyKey = System.Drawing.Color.Yellow;
             this.ResumeLayout(false);
             this.PerformLayout();
 
