@@ -54,7 +54,7 @@
             // 
             // txtPantalla
             // 
-            this.txtPantalla.Location = new System.Drawing.Point(19, 79);
+            this.txtPantalla.Location = new System.Drawing.Point(25, 81);
             this.txtPantalla.Name = "txtPantalla";
             this.txtPantalla.ReadOnly = true;
             this.txtPantalla.Size = new System.Drawing.Size(345, 20);
