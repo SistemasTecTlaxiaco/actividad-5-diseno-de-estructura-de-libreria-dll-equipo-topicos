@@ -46,7 +46,7 @@
             this.btnN4 = new System.Windows.Forms.Button();
             this.btnN7 = new System.Windows.Forms.Button();
             this.btnSuma = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnfraccion = new System.Windows.Forms.Button();
             this.btnPorcentaje = new System.Windows.Forms.Button();
             this.BtnPotencia = new System.Windows.Forms.Button();
             this.btnRaiz = new System.Windows.Forms.Button();
@@ -69,6 +69,7 @@
             this.btnIgual.TabIndex = 37;
             this.btnIgual.Text = "=";
             this.btnIgual.UseVisualStyleBackColor = true;
+            this.btnIgual.Click += new System.EventHandler(this.btnIgual_Click);
             // 
             // btnBorarTodo
             // 
@@ -79,6 +80,7 @@
             this.btnBorarTodo.TabIndex = 36;
             this.btnBorarTodo.Text = "EC";
             this.btnBorarTodo.UseVisualStyleBackColor = true;
+            this.btnBorarTodo.Click += new System.EventHandler(this.btnBorarTodo_Click);
             // 
             // btnDivision
             // 
@@ -89,6 +91,7 @@
             this.btnDivision.TabIndex = 35;
             this.btnDivision.Text = "/";
             this.btnDivision.UseVisualStyleBackColor = true;
+            this.btnDivision.Click += new System.EventHandler(this.btnDivision_Click);
             // 
             // btnPunto
             // 
@@ -99,6 +102,7 @@
             this.btnPunto.TabIndex = 34;
             this.btnPunto.Text = ".";
             this.btnPunto.UseVisualStyleBackColor = true;
+            this.btnPunto.Click += new System.EventHandler(this.btnPunto_Click);
             // 
             // btnN3
             // 
@@ -142,6 +146,7 @@
             this.btnMultiplicacion.TabIndex = 30;
             this.btnMultiplicacion.Text = "*";
             this.btnMultiplicacion.UseVisualStyleBackColor = true;
+            this.btnMultiplicacion.Click += new System.EventHandler(this.btnMultiplicacion_Click);
             // 
             // btnN2
             // 
@@ -185,6 +190,7 @@
             this.btnResta.TabIndex = 26;
             this.btnResta.Text = "-";
             this.btnResta.UseVisualStyleBackColor = true;
+            this.btnResta.Click += new System.EventHandler(this.btnResta_Click);
             // 
             // btnN0
             // 
@@ -239,16 +245,18 @@
             this.btnSuma.TabIndex = 21;
             this.btnSuma.Text = "+";
             this.btnSuma.UseVisualStyleBackColor = true;
+            this.btnSuma.Click += new System.EventHandler(this.btnSuma_Click);
             // 
-            // button1
+            // btnfraccion
             // 
-            this.button1.Font = new System.Drawing.Font("OCR A Extended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(299, 118);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(71, 40);
-            this.button1.TabIndex = 43;
-            this.button1.Text = "/";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnfraccion.Font = new System.Drawing.Font("OCR A Extended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnfraccion.Location = new System.Drawing.Point(299, 118);
+            this.btnfraccion.Name = "btnfraccion";
+            this.btnfraccion.Size = new System.Drawing.Size(71, 40);
+            this.btnfraccion.TabIndex = 43;
+            this.btnfraccion.Text = "/";
+            this.btnfraccion.UseVisualStyleBackColor = true;
+            this.btnfraccion.Click += new System.EventHandler(this.btnfraccion_Click);
             // 
             // btnPorcentaje
             // 
@@ -259,6 +267,7 @@
             this.btnPorcentaje.TabIndex = 42;
             this.btnPorcentaje.Text = "%";
             this.btnPorcentaje.UseVisualStyleBackColor = true;
+            this.btnPorcentaje.Click += new System.EventHandler(this.btnPorcentaje_Click);
             // 
             // BtnPotencia
             // 
@@ -269,6 +278,7 @@
             this.BtnPotencia.TabIndex = 41;
             this.BtnPotencia.Text = "^";
             this.BtnPotencia.UseVisualStyleBackColor = true;
+            this.BtnPotencia.Click += new System.EventHandler(this.BtnPotencia_Click);
             // 
             // btnRaiz
             // 
@@ -279,13 +289,14 @@
             this.btnRaiz.TabIndex = 40;
             this.btnRaiz.Text = "√";
             this.btnRaiz.UseVisualStyleBackColor = true;
+            this.btnRaiz.Click += new System.EventHandler(this.btnRaiz_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(400, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnfraccion);
             this.Controls.Add(this.btnPorcentaje);
             this.Controls.Add(this.BtnPotencia);
             this.Controls.Add(this.btnRaiz);
@@ -334,7 +345,7 @@
         private System.Windows.Forms.Button btnN4;
         private System.Windows.Forms.Button btnN7;
         private System.Windows.Forms.Button btnSuma;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnfraccion;
         private System.Windows.Forms.Button btnPorcentaje;
         private System.Windows.Forms.Button BtnPotencia;
         private System.Windows.Forms.Button btnRaiz;
