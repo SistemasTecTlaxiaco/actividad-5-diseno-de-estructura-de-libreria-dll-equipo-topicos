@@ -116,22 +116,41 @@ namespace CalculadoraCientifica
 
         private void btnRaiz_Click(object sender, EventArgs e)
         {
+            if (txtPantalla.Text != "")
+            {
+                double numero = Convert.ToDouble(txtPantalla.Text);
 
+                if (numero < 0)
+                {
+                    MessageBox.Show("No se puede calcular la raíz de un número negativo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    double resultado = Math.Sqrt(numero);
+                    txtPantalla.Text = resultado.ToString();
+                }
+            }
         }
 
         private void BtnPotencia_Click(object sender, EventArgs e)
         {
-
+            numero1 = Convert.ToDouble(txtPantalla.Text);
+            operador = BtnPotencia.Text;
+            txtPantalla.Clear();
         }
 
         private void btnPorcentaje_Click(object sender, EventArgs e)
         {
-
+            numero1 = Convert.ToDouble(txtPantalla.Text);
+            operador = btnPorcentaje.Text;
+            txtPantalla.Clear();
         }
 
         private void btnfraccion_Click(object sender, EventArgs e)
         {
-
+            numero1 = Convert.ToDouble(txtPantalla.Text);
+            operador = btnfraccion.Text;
+            txtPantalla.Clear();
         }
 
         private void btnBorarTodo_Click(object sender, EventArgs e)
@@ -159,6 +178,9 @@ namespace CalculadoraCientifica
                         case "-": resultado = Calculadora.Restar(numero1, numero2); break;
                         case "*": resultado = Calculadora.Multiplicar(numero1, numero2); break;
                         case "/": resultado = Calculadora.Dividir(numero1, numero2); break;
+                        case "^": resultado = Calculadora.Potencia(numero1, numero2); break;
+                        case "%": resultado = Calculadora.Porcentaje(numero1, numero2); break;
+                        case "1/x": resultado = Calculadora.Fraccion(numero1, numero2); break;
                     }
 
                     txtPantalla.Text = resultado.ToString();

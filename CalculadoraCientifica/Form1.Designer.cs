@@ -49,7 +49,7 @@
             this.btnfraccion = new System.Windows.Forms.Button();
             this.btnPorcentaje = new System.Windows.Forms.Button();
             this.BtnPotencia = new System.Windows.Forms.Button();
-            this.btnRaiz = new System.Windows.Forms.Button();
+            this.btnRaiz2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtPantalla
@@ -256,7 +256,7 @@
             this.btnfraccion.Name = "btnfraccion";
             this.btnfraccion.Size = new System.Drawing.Size(71, 40);
             this.btnfraccion.TabIndex = 43;
-            this.btnfraccion.Text = "/";
+            this.btnfraccion.Text = "1/x";
             this.btnfraccion.UseVisualStyleBackColor = true;
             this.btnfraccion.Click += new System.EventHandler(this.btnfraccion_Click);
             // 
@@ -282,16 +282,16 @@
             this.BtnPotencia.UseVisualStyleBackColor = true;
             this.BtnPotencia.Click += new System.EventHandler(this.BtnPotencia_Click);
             // 
-            // btnRaiz
+            // btnRaiz2
             // 
-            this.btnRaiz.Font = new System.Drawing.Font("OCR A Extended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRaiz.Location = new System.Drawing.Point(25, 118);
-            this.btnRaiz.Name = "btnRaiz";
-            this.btnRaiz.Size = new System.Drawing.Size(71, 40);
-            this.btnRaiz.TabIndex = 40;
-            this.btnRaiz.Text = "√";
-            this.btnRaiz.UseVisualStyleBackColor = true;
-            this.btnRaiz.Click += new System.EventHandler(this.btnRaiz_Click);
+            this.btnRaiz2.Font = new System.Drawing.Font("OCR A Extended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRaiz2.Location = new System.Drawing.Point(25, 118);
+            this.btnRaiz2.Name = "btnRaiz2";
+            this.btnRaiz2.Size = new System.Drawing.Size(71, 40);
+            this.btnRaiz2.TabIndex = 40;
+            this.btnRaiz2.Text = "√";
+            this.btnRaiz2.UseVisualStyleBackColor = true;
+            this.btnRaiz2.Click += new System.EventHandler(this.btnRaiz_Click);
             // 
             // calculadora
             // 
@@ -302,7 +302,7 @@
             this.Controls.Add(this.btnfraccion);
             this.Controls.Add(this.btnPorcentaje);
             this.Controls.Add(this.BtnPotencia);
-            this.Controls.Add(this.btnRaiz);
+            this.Controls.Add(this.btnRaiz2);
             this.Controls.Add(this.txtPantalla);
             this.Controls.Add(this.btnIgual);
             this.Controls.Add(this.btnBorarTodo);
@@ -353,7 +353,7 @@
         private System.Windows.Forms.Button btnfraccion;
         private System.Windows.Forms.Button btnPorcentaje;
         private System.Windows.Forms.Button BtnPotencia;
-        private System.Windows.Forms.Button btnRaiz;
+        private System.Windows.Forms.Button btnRaiz2;
     }
 }
 
