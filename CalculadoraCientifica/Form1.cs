@@ -146,12 +146,64 @@ namespace CalculadoraCientifica
             txtPantalla.Clear();
         }
 
+        private string DecimalToFraction(double decimalNumber)
+        {
+            const double precision = 0.0001;
+            int sign = Math.Sign(decimalNumber);
+            decimalNumber = Math.Abs(decimalNumber);
+
+            int integerPart = (int)decimalNumber;
+            decimalNumber -= integerPart;
+
+            if (decimalNumber < precision)
+            {
+                return $"{sign * integerPart}";
+            }
+            else if (1 - precision < decimalNumber)
+            {
+                return $"{sign * (integerPart + 1)}";
+            }
+
+            int lowerNumerator = 0;
+            int lowerDenominator = 1;
+            int upperNumerator = 1;
+            int upperDenominator = 1;
+
+            while (true)
+            {
+                int middleNumerator = lowerNumerator + upperNumerator;
+                int middleDenominator = lowerDenominator + upperDenominator;
+
+                if (middleDenominator * (decimalNumber + precision) < middleNumerator)
+                {
+                    upperNumerator = middleNumerator;
+                    upperDenominator = middleDenominator;
+                }
+                else if (middleNumerator < (decimalNumber - precision) * middleDenominator)
+                {
+                    lowerNumerator = middleNumerator;
+                    lowerDenominator = middleDenominator;
+                }
+                else
+                {
+                    return $"{sign * (integerPart * middleDenominator + middleNumerator)}/{middleDenominator}";
+                }
+            }
+        }
+
         private void btnfraccion_Click(object sender, EventArgs e)
         {
-            numero1 = Convert.ToDouble(txtPantalla.Text);
-            operador = btnfraccion.Text;
-            txtPantalla.Clear();
+            if (txtPantalla.Text != "")
+            {
+                double decimalNumber = Convert.ToDouble(txtPantalla.Text);
+                string fraction = DecimalToFraction(decimalNumber);
+                txtPantalla.Text = fraction;
+            }
         }
+
+        
+
+
 
         private void btnBorarTodo_Click(object sender, EventArgs e)
         {
@@ -180,7 +232,7 @@ namespace CalculadoraCientifica
                         case "/": resultado = Calculadora.Dividir(numero1, numero2); break;
                         case "^": resultado = Calculadora.Potencia(numero1, numero2); break;
                         case "%": resultado = Calculadora.Porcentaje(numero1, numero2); break;
-                        case "1/x": resultado = Calculadora.Fraccion(numero1, numero2); break;
+                    
                     }
 
                     txtPantalla.Text = resultado.ToString();
