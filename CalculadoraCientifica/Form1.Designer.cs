@@ -56,7 +56,7 @@
             // 
             this.txtPantalla.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtPantalla.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.txtPantalla.Location = new System.Drawing.Point(25, 81);
+            this.txtPantalla.Location = new System.Drawing.Point(25, 26);
             this.txtPantalla.Name = "txtPantalla";
             this.txtPantalla.ReadOnly = true;
             this.txtPantalla.Size = new System.Drawing.Size(345, 20);
