@@ -20,6 +20,7 @@ namespace CalculadoraLib
                 throw new ArgumentException("No se puede calcular la raíz cuadrada de un número negativo.");
             return Math.Sqrt(a);
         }
+
         public static double Potencia(double baseNum, double exponente) => Math.Pow(baseNum, exponente);
 
         public static double Porcentaje(double total, double porcentaje) => (total * porcentaje) / 100;
